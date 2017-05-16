@@ -17,7 +17,7 @@ CREATE TABLE blocks
 	image TEXT,
 	glyph	TEXT,
 	created DATETIME,
-	modified DATETIME,
+	modified DATETIME
 );
 
 CREATE TABLE entries 
