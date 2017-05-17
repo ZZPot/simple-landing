@@ -42,7 +42,15 @@ class PagesController extends AppController
 	{
 		$this->loadModel('Blocks');
 		$blocks = $this->Blocks->find();
-		$this->set(compact('blocks'));
+		
+		$this->loadModel('Entries');
+		$entries = [];
+		foreach($blocks as $block)
+		{
+			$entriesInBlock = $this->Entries->find()->where(['block_id = ' => $block->id]);
+			$entries[$block->id] = $entriesInBlock;
+		}
+		$this->set(compact('blocks', 'entries'));
 		$this->viewBuilder()->setLayout('bs');
 	}
     public function display(...$path)

@@ -11,24 +11,30 @@ $blocksInRow = 2; //should affect on col-md-* class
 	$newRow = $blockCount % $blocksInRow;
 ?>
 <?php if ($newRow == 0):?>
-<div class="row">
+	<div class="row">
 <?php endif; ?>
 <div class="col-md-6 block">
-<div class="row row-header text-left">
-	<div class="col-md-3"><?= 'id'?></div>
-	<div class="col-md-3"><?= 'title'?></div>
-	<div class="col-md-3"><?= 'created'?></div>
-	<div class="col-md-3"><?= 'modified'?></div>
+<div class="jumbotron text-center news-jumb">
+	<?php if ($hasUrl): ?><a href="<?= h($block->url)?>"><?php endif; ?><?= h($block->title) ?><?php if($hasUrl): ?></a><?php endif;?>
 </div>
-<div class="row">	
-	<div class="col-md-3"><?= $this->Number->format($block->id) ?></div>
-	<div class="col-md-3"><?php if ($hasUrl): ?><a href="<?= h($block->url)?>"><?php endif; ?><?= h($block->title) ?><?php if($hasUrl): ?></a><?php endif;?></div>
-	<div class="col-md-3"><?= h($block->created) ?></div>
-	<div class="col-md-3"><?= h($block->modified) ?></div>
+
+<?php foreach ($entries[$block->id] as $entry): ?>
+<?php
+	$hasUrlEntry = !is_null($entry->url) && ($entry->url != '');
+	$hasImageEntry = !is_null($entry->image) && ($entry->image != '');
+?>
+
+<div class="row"<?php if ($hasImageEntry): ?>style="background-image: url(<?= h($entry->image)?>); background-size: auto 100%"<?php endif; ?>>	
+	<div class="col-md-3"><?= $this->Number->format($entry->id) ?></div>
+	<div class="col-md-3"><?php if ($hasUrlEntry): ?><a href="<?= h($entry->url)?>"><?php endif; ?><?= h($entry->title) ?><?php if($hasUrlEntry): ?></a><?php endif;?></div>
+	<div class="col-md-3"><?= h($entry->created) ?></div>
+	<div class="col-md-3"><?= h($entry->modified) ?></div>
 </div>
+<?php endforeach; ?>
 </div>
+
 <?php if ($newRow == $blocksInRow - 1):?>
-</div>
+	</div>
 <?php endif; ?>
 <?php $blockCount++;?>
 <?php endforeach; ?>
