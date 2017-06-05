@@ -16,6 +16,7 @@ class BlocksController extends AppController
      *
      * @return \Cake\Network\Response|null
      */
+	 
     public function index()
     {
         $blocks = $this->paginate($this->Blocks);

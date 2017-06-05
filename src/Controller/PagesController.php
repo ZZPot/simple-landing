@@ -41,16 +41,8 @@ class PagesController extends AppController
 	public function index()
 	{
 		$this->loadModel('Blocks');
-		$blocks = $this->Blocks->find();
-		
-		$this->loadModel('Entries');
-		$entries = [];
-		foreach($blocks as $block)
-		{
-			$entriesInBlock = $this->Entries->find()->where(['block_id = ' => $block->id]);
-			$entries[$block->id] = $entriesInBlock;
-		}
-		$this->set(compact('blocks', 'entries'));
+		$blocks = $this->Blocks->find()->contain(['Entries']);
+		$this->set(compact('blocks'));
 		$this->viewBuilder()->setLayout('bs');
 	}
     public function display(...$path)
