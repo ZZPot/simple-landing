@@ -617,7 +617,11 @@ Stack Trace:
 #16 {main}
 
 
+<<<<<<< HEAD
 2017-05-20 06:24:00 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'land.blocks' doesn't exist
+=======
+2017-06-01 05:24:31 Error: [Cake\Database\Exception] SQLSTATE[HY000]: General error: 1812 Tablespace is missing for table `land`.`blocks`.
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Request URL: /
 Stack Trace:
 #0 C:\site\land\www\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'blocks', Array, Object(Cake\Database\Schema\TableSchema))
@@ -645,7 +649,11 @@ Stack Trace:
 #22 {main}
 
 
+<<<<<<< HEAD
 2017-05-20 06:30:01 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'land.blocks' doesn't exist
+=======
+2017-06-01 05:25:02 Error: [Cake\Database\Exception] SQLSTATE[HY000]: General error: 1812 Tablespace is missing for table `land`.`blocks`.
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Request URL: /
 Stack Trace:
 #0 C:\site\land\www\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'blocks', Array, Object(Cake\Database\Schema\TableSchema))
@@ -673,6 +681,7 @@ Stack Trace:
 #22 {main}
 
 
+<<<<<<< HEAD
 2017-05-20 06:42:35 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'land.blocks' doesn't exist
 Request URL: /
 Stack Trace:
@@ -708,6 +717,16 @@ Stack Trace:
 #1 C:\site\land\www\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\PagesController->index()
 #2 C:\site\land\www\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
 #3 C:\site\land\www\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+=======
+2017-06-05 03:05:12 Error: [Error] Call to undefined method App\Controller\BlocksController::hasMany() in C:\site\land\www\src\Controller\BlocksController.php on line 16
+Request URL: /blocks
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\site\land\www\vendor\cakephp\cakephp\src\Controller\Controller.php(262): App\Controller\BlocksController->initialize()
+#1 [internal function]: Cake\Controller\Controller->__construct(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), 'Blocks')
+#2 C:\site\land\www\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(77): ReflectionClass->newInstance(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), 'Blocks')
+#3 C:\site\land\www\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 #4 C:\site\land\www\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
 #5 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
 #6 C:\site\land\www\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
@@ -722,6 +741,7 @@ Stack Trace:
 #15 {main}
 
 
+<<<<<<< HEAD
 2017-06-11 04:05:03 Error: [Error] Cannot use object of type Cake\Collection\Collection as array in C:\site\land\www\src\Template\Pages\index.ctp on line 7
 Request URL: /
 Client IP: 127.0.0.1
@@ -894,6 +914,9 @@ Stack Trace:
 
 
 2017-06-11 04:14:11 Error: [ParseError] syntax error, unexpected ';', expecting ',' or ')' in C:\site\land\www\src\Controller\PagesController.php on line 45
+=======
+2017-06-05 03:13:13 Error: [ParseError] syntax error, unexpected ';', expecting ',' or ')' in C:\site\land\www\src\Controller\PagesController.php on line 45
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Request URL: /
 Client IP: 127.0.0.1
 Stack Trace:
@@ -918,6 +941,7 @@ Stack Trace:
 #18 {main}
 
 
+<<<<<<< HEAD
 2017-06-11 06:15:34 Error: [Cake\View\Exception\MissingHelperException] Helper class OrdersHelper could not be found.
 Exception Attributes: array (
   'class' => 'OrdersHelper',
@@ -1169,10 +1193,14 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 80
 
 
 2017-06-11 08:18:48 Warning: Warning (2): Declaration of App\Controller\PagesController::beforeRender(App\Controller\Cake\Event\Event $event) should be compatible with App\Controller\AppController::beforeRender(Cake\Event\Event $event) in [C:\site\land\www\src\Controller\PagesController.php, line 31]
+=======
+2017-06-05 03:13:31 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\site\land\www\src\Template\Pages\index.ctp, line 21]
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Request URL: /
 Client IP: 127.0.0.1
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+<<<<<<< HEAD
 include - APP/Controller\PagesController.php, line 31
 Composer\Autoload\includeFile - ROOT\vendor\composer\ClassLoader.php, line 412
 Composer\Autoload\ClassLoader::loadClass() - ROOT\vendor\composer\ClassLoader.php, line 301
@@ -1182,6 +1210,15 @@ Cake\Core\App::_classExistsInBase() - CORE\src\Core\App.php, line 152
 Cake\Core\App::className() - CORE\src\Core\App.php, line 64
 Cake\Http\ControllerFactory::create() - CORE\src\Http\ControllerFactory.php, line 68
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 90
+=======
+include - APP/Template\Pages\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1011
+Cake\View\View::_render() - CORE\src\View\View.php, line 972
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 93
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 78
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
 Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 59
@@ -1196,6 +1233,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 80
 
 
 
+<<<<<<< HEAD
 2017-06-11 08:18:49 Error: [TypeError] Argument 1 passed to App\Controller\PagesController::beforeRender() must be an instance of App\Controller\Cake\Event\Event, instance of Cake\Event\Event given, called in C:\site\land\www\vendor\cakephp\cakephp\src\Event\EventManager.php on line 414 in C:\site\land\www\src\Controller\PagesController.php on line 53
 Request URL: /
 Client IP: 127.0.0.1
@@ -1221,10 +1259,14 @@ Stack Trace:
 
 
 2017-06-11 08:19:03 Warning: Warning (2): Declaration of App\Controller\PagesController::beforeRender(App\Controller\App\Controller\Cake\Event\Event $event) should be compatible with App\Controller\AppController::beforeRender(Cake\Event\Event $event) in [C:\site\land\www\src\Controller\PagesController.php, line 31]
+=======
+2017-06-05 03:14:10 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\site\land\www\src\Template\Pages\index.ctp, line 21]
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Request URL: /
 Client IP: 127.0.0.1
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+<<<<<<< HEAD
 include - APP/Controller\PagesController.php, line 31
 Composer\Autoload\includeFile - ROOT\vendor\composer\ClassLoader.php, line 412
 Composer\Autoload\ClassLoader::loadClass() - ROOT\vendor\composer\ClassLoader.php, line 301
@@ -1234,6 +1276,15 @@ Cake\Core\App::_classExistsInBase() - CORE\src\Core\App.php, line 152
 Cake\Core\App::className() - CORE\src\Core\App.php, line 64
 Cake\Http\ControllerFactory::create() - CORE\src\Http\ControllerFactory.php, line 68
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 90
+=======
+include - APP/Template\Pages\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1011
+Cake\View\View::_render() - CORE\src\View\View.php, line 972
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 93
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 78
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
 Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 59
@@ -1248,6 +1299,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 80
 
 
 
+<<<<<<< HEAD
 2017-06-11 08:19:03 Error: [TypeError] Argument 1 passed to App\Controller\PagesController::beforeRender() must be an instance of App\Controller\App\Controller\Cake\Event\Event, instance of Cake\Event\Event given, called in C:\site\land\www\vendor\cakephp\cakephp\src\Event\EventManager.php on line 414 in C:\site\land\www\src\Controller\PagesController.php on line 53
 Request URL: /
 Client IP: 127.0.0.1
@@ -1297,10 +1349,14 @@ Stack Trace:
 
 
 2017-06-11 08:41:00 Warning: Warning (2): Declaration of App\Controller\PagesController::beforeRender(App\Controller\Event $event) should be compatible with App\Controller\AppController::beforeRender(Cake\Event\Event $event) in [C:\site\land\www\src\Controller\PagesController.php, line 31]
+=======
+2017-06-05 03:19:31 Warning: Warning (2): A non-numeric value encountered in [C:\site\land\www\src\Template\Pages\index.ctp, line 16]
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Request URL: /
 Client IP: 127.0.0.1
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+<<<<<<< HEAD
 include - APP/Controller\PagesController.php, line 31
 Composer\Autoload\includeFile - ROOT\vendor\composer\ClassLoader.php, line 412
 Composer\Autoload\ClassLoader::loadClass() - ROOT\vendor\composer\ClassLoader.php, line 301
@@ -1310,6 +1366,15 @@ Cake\Core\App::_classExistsInBase() - CORE\src\Core\App.php, line 152
 Cake\Core\App::className() - CORE\src\Core\App.php, line 64
 Cake\Http\ControllerFactory::create() - CORE\src\Http\ControllerFactory.php, line 68
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 90
+=======
+include - APP/Template\Pages\index.ctp, line 16
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1011
+Cake\View\View::_render() - CORE\src\View\View.php, line 972
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 93
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 78
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
 Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 59
@@ -1324,6 +1389,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 80
 
 
 
+<<<<<<< HEAD
 2017-06-11 08:41:01 Error: [TypeError] Argument 1 passed to App\Controller\PagesController::beforeRender() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in C:\site\land\www\vendor\cakephp\cakephp\src\Event\EventManager.php on line 414 in C:\site\land\www\src\Controller\PagesController.php on line 48
 Request URL: /
 Client IP: 127.0.0.1
@@ -1349,10 +1415,14 @@ Stack Trace:
 
 
 2017-06-11 08:41:56 Warning: Warning (2): Declaration of App\Controller\PagesController::beforeRender(App\Controller\Event $event) should be compatible with App\Controller\AppController::beforeRender(Cake\Event\Event $event) in [C:\site\land\www\src\Controller\PagesController.php, line 31]
+=======
+2017-06-05 03:19:31 Warning: Warning (2): Division by zero in [C:\site\land\www\src\Template\Pages\index.ctp, line 16]
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Request URL: /
 Client IP: 127.0.0.1
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+<<<<<<< HEAD
 include - APP/Controller\PagesController.php, line 31
 Composer\Autoload\includeFile - ROOT\vendor\composer\ClassLoader.php, line 412
 Composer\Autoload\ClassLoader::loadClass() - ROOT\vendor\composer\ClassLoader.php, line 301
@@ -1362,6 +1432,15 @@ Cake\Core\App::_classExistsInBase() - CORE\src\Core\App.php, line 152
 Cake\Core\App::className() - CORE\src\Core\App.php, line 64
 Cake\Http\ControllerFactory::create() - CORE\src\Http\ControllerFactory.php, line 68
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 90
+=======
+include - APP/Template\Pages\index.ctp, line 16
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1011
+Cake\View\View::_render() - CORE\src\View\View.php, line 972
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 93
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 78
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
 Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 59
@@ -1376,6 +1455,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 80
 
 
 
+<<<<<<< HEAD
 2017-06-11 08:41:57 Error: [TypeError] Argument 1 passed to App\Controller\PagesController::beforeRender() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in C:\site\land\www\vendor\cakephp\cakephp\src\Event\EventManager.php on line 414 in C:\site\land\www\src\Controller\PagesController.php on line 48
 Request URL: /
 Client IP: 127.0.0.1
@@ -1401,10 +1481,14 @@ Stack Trace:
 
 
 2017-06-11 08:43:21 Warning: Warning (2): Declaration of App\Controller\PagesController::beforeRender(App\Controller\App\Controller\Event $event) should be compatible with App\Controller\AppController::beforeRender(Cake\Event\Event $event) in [C:\site\land\www\src\Controller\PagesController.php, line 31]
+=======
+2017-06-06 02:40:53 Warning: Warning (2): Division by zero in [C:\site\land\www\src\Template\Element\row_block.ctp, line 2]
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Request URL: /
 Client IP: 127.0.0.1
 Trace:
 Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+<<<<<<< HEAD
 include - APP/Controller\PagesController.php, line 31
 Composer\Autoload\includeFile - ROOT\vendor\composer\ClassLoader.php, line 412
 Composer\Autoload\ClassLoader::loadClass() - ROOT\vendor\composer\ClassLoader.php, line 301
@@ -1414,6 +1498,20 @@ Cake\Core\App::_classExistsInBase() - CORE\src\Core\App.php, line 152
 Cake\Core\App::className() - CORE\src\Core\App.php, line 64
 Cake\Http\ControllerFactory::create() - CORE\src\Http\ControllerFactory.php, line 68
 Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 90
+=======
+include - APP/Template\Element\row_block.ctp, line 2
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1011
+Cake\View\View::_render() - CORE\src\View\View.php, line 972
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1358
+Cake\View\View::element() - CORE\src\View\View.php, line 499
+include - APP/Template\Pages\index.ctp, line 13
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1011
+Cake\View\View::_render() - CORE\src\View\View.php, line 972
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 93
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
 Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 78
 Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
 Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 59
@@ -1428,6 +1526,7 @@ Cake\Http\Server::run() - CORE\src\Http\Server.php, line 80
 
 
 
+<<<<<<< HEAD
 2017-06-11 08:43:22 Error: [TypeError] Argument 1 passed to App\Controller\PagesController::beforeRender() must be an instance of App\Controller\App\Controller\Event, instance of Cake\Event\Event given, called in C:\site\land\www\vendor\cakephp\cakephp\src\Event\EventManager.php on line 414 in C:\site\land\www\src\Controller\PagesController.php on line 48
 Request URL: /
 Client IP: 127.0.0.1
@@ -1992,6 +2091,143 @@ header - [internal], line ??
 Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 178
 Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 55
 Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 105
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+=======
+>>>>>>> 73f9fbe44360cc3df636f9e5f8e6f2ce8b8dc64d
+2017-06-12 03:56:57 Error: [ParseError] syntax error, unexpected '<<' (T_SL) in C:\site\land\www\src\Controller\PagesController.php on line 62
+Request URL: /
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\site\land\www\vendor\composer\ClassLoader.php(301): Composer\Autoload\includeFile('C:\\site\\land\\ww...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 [internal function]: spl_autoload_call('App\\Controller\\...')
+#3 C:\site\land\www\vendor\cakephp\cakephp\src\Core\App.php(152): class_exists('App\\Controller\\...')
+#4 C:\site\land\www\vendor\cakephp\cakephp\src\Core\App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Pag...', 'App')
+#5 C:\site\land\www\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(68): Cake\Core\App::className('Pages', 'Controller', 'Controller')
+#6 C:\site\land\www\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\site\land\www\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\site\land\www\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\site\land\www\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\site\land\www\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\site\land\www\webroot\index.php(37): Cake\Http\Server->run()
+#18 {main}
+
+
+2017-06-12 03:57:45 Error: [Cake\View\Exception\MissingElementException] Element file "Element\.ctp" is missing.
+Exception Attributes: array (
+  0 => 'Element\\.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 C:\site\land\www\src\Template\Element\row_block.ctp(13): Cake\View\View->element('', Array)
+#1 C:\site\land\www\vendor\cakephp\cakephp\src\View\View.php(1011): include('C:\\site\\land\\ww...')
+#2 C:\site\land\www\vendor\cakephp\cakephp\src\View\View.php(972): Cake\View\View->_evaluate('C:\\site\\land\\ww...', Array)
+#3 C:\site\land\www\vendor\cakephp\cakephp\src\View\View.php(1358): Cake\View\View->_render('C:\\site\\land\\ww...', Array)
+#4 C:\site\land\www\vendor\cakephp\cakephp\src\View\View.php(499): Cake\View\View->_renderElement('C:\\site\\land\\ww...', Array, Array)
+#5 C:\site\land\www\src\Template\Pages\index.ctp(26): Cake\View\View->element('row_block', Array)
+#6 C:\site\land\www\vendor\cakephp\cakephp\src\View\View.php(1011): include('C:\\site\\land\\ww...')
+#7 C:\site\land\www\vendor\cakephp\cakephp\src\View\View.php(972): Cake\View\View->_evaluate('C:\\site\\land\\ww...', Array)
+#8 C:\site\land\www\vendor\cakephp\cakephp\src\View\View.php(596): Cake\View\View->_render('C:\\site\\land\\ww...')
+#9 C:\site\land\www\vendor\cakephp\cakephp\src\Controller\Controller.php(623): Cake\View\View->render(NULL, NULL)
+#10 C:\site\land\www\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#11 C:\site\land\www\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PagesController))
+#12 C:\site\land\www\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\site\land\www\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\site\land\www\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\site\land\www\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\site\land\www\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\site\land\www\webroot\index.php(37): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-06-12 03:59:02 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\site\land\www\src\Template\Pages\index.ctp, line 21]
+Request URL: /
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+include - APP/Template\Pages\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1011
+Cake\View\View::_render() - CORE\src\View\View.php, line 972
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 80
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-06-12 04:00:18 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\site\land\www\src\Template\Pages\index.ctp, line 21]
+Request URL: /
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+include - APP/Template\Pages\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1011
+Cake\View\View::_render() - CORE\src\View\View.php, line 972
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 80
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2017-06-12 04:00:52 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\site\land\www\src\Template\Pages\index.ctp, line 21]
+Request URL: /
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 153
+include - APP/Template\Pages\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1011
+Cake\View\View::_render() - CORE\src\View\View.php, line 972
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 623
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 125
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 93
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 78
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 59
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 92
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 80
 [main] - ROOT\webroot\index.php, line 37
 
 
