@@ -23,7 +23,8 @@ $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstra
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <div class="jumbotron top-jumb text-center">
+    <div class="jumbotron top-jumb text-center" style="background-image: url(<?= $rand_wp['url']; ?>); 	background-size: 100% auto;	background-position: center center;	background-repeat: no-repeat;">
+		<div class="membrana"></div>
 		<h1><a href=""><?= $this->fetch('title') ?></a></h1>
 	</div>
 	<div class="container-fluid">
@@ -33,6 +34,7 @@ $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstra
         <?= $this->fetch('content') ?>
     </div>
     <footer>
+		
     </footer>
 </body>
 </html>

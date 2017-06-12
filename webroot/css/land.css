@@ -1,8 +1,17 @@
 .top-jumb
 {
-	background-color: rgba(20, 255, 40, 0.9);
+	background-color: rgb(200, 200, 200);
+	position: relative;
 }
-
+.membrana
+{
+	background-color: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	top: 0px;
+}
 .row-header
 {
 	border-bottom: 2px solid #555;
@@ -10,5 +19,31 @@
 }
 .block
 {
-	border: 1px dotted black;
+	
+}
+.entry-title
+{
+}
+.entry-body
+{
+	background-size: 100% auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.entry-footer
+{
+	font-size: 10px;
+	color: rgb(200, 200, 200);
+}
+body > .container
+{
+	padding-bottom: 60px;
+}
+footer
+{
+	height: 55px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: rgb(200, 200, 200);
 }

@@ -1,40 +1,11 @@
 <?php
 $this->assign('title', 'All stuff there');
 $blockCount = 0;
-$blocksInRow = 2; //should affect on col-md-* class
-?>
-<h3><?= __('Blocks') ?></h3>
-
-<?php foreach ($blocks as $block): ?>
-<?php
-	$hasUrl = !is_null($block->url) && ($block->url != '');
-	$newRow = $blockCount % $blocksInRow;
-?>
-<?php if ($newRow == 0):?>
-	<div class="row">
-<?php endif; ?>
-<div class="col-md-6 block">
-<div class="jumbotron text-center news-jumb">
-	<?php if ($hasUrl): ?><a href="<?= h($block->url)?>"><?php endif; ?><?= h($block->title) ?><?php if($hasUrl): ?></a><?php endif;?>
-</div>
-
-<?php foreach ($entries[$block->id] as $entry): ?>
-<?php
-	$hasUrlEntry = !is_null($entry->url) && ($entry->url != '');
-	$hasImageEntry = !is_null($entry->image) && ($entry->image != '');
+$blocksInRow = 4; //should affect on col-md-* class
 ?>
 
-<div class="row"<?php if ($hasImageEntry): ?>style="background-image: url(<?= h($entry->image)?>); background-size: auto 100%"<?php endif; ?>>	
-	<div class="col-md-3"><?= $this->Number->format($entry->id) ?></div>
-	<div class="col-md-3"><?php if ($hasUrlEntry): ?><a href="<?= h($entry->url)?>"><?php endif; ?><?= h($entry->title) ?><?php if($hasUrlEntry): ?></a><?php endif;?></div>
-	<div class="col-md-3"><?= h($entry->created) ?></div>
-	<div class="col-md-3"><?= h($entry->modified) ?></div>
+<div class="row">
+<?= $this->element('row_block', ['block' => $news, 'blocksInRow' => 4, 'entry_template' => 'row_entry'])?>
+<?= $this->element('row_block', ['block' => $pokemons, 'blocksInRow' => 2, 'entry_template' => 'full_entry'])?>
+<?= $this->element('row_block', ['block' => $wallpapers, 'blocksInRow' => 4, 'entry_template' => 'row_entry'])?>
 </div>
-<?php endforeach; ?>
-</div>
-
-<?php if ($newRow == $blocksInRow - 1):?>
-	</div>
-<?php endif; ?>
-<?php $blockCount++;?>
-<?php endforeach; ?>

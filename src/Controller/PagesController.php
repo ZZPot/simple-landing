@@ -18,6 +18,8 @@ use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\Log\Log;
+use Cake\Event\Event;
 
 /**
  * Static content controller
@@ -29,56 +31,66 @@ use Cake\View\Exception\MissingTemplateException;
 class PagesController extends AppController
 {
 
-    /**
-     * Displays a view
-     *
-     * @param string ...$path Path segments.
-     * @return void|\Cake\Network\Response
-     * @throws \Cake\Network\Exception\ForbiddenException When a directory traversal attempt.
-     * @throws \Cake\Network\Exception\NotFoundException When the view file could not
-     *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
-     */
+	/**
+	 * Displays a view
+	 *
+	 * @param string ...$path Path segments.
+	 * @return void|\Cake\Network\Response
+	 * @throws \Cake\Network\Exception\ForbiddenException When a directory traversal attempt.
+	 * @throws \Cake\Network\Exception\NotFoundException When the view file could not
+	 *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
+	 */
+	public function initialize()
+	{
+	
+	}
+
+	public function beforeRender(Event $event)
+	{
+		$this->loadModel('Entries');
+		$rand_wp = $this->Entries->find()->matching('Blocks',  function ($q) 
+		{
+				return $q->where(['Blocks.title' => 'Wallpapers']);
+		})->shuffle()->first();
+		$rand_wp = $rand_wp->toArray();
+		$this->set(compact('rand_wp'));
+	}
+	
 	public function index()
 	{
 		$this->loadModel('Blocks');
-		$blocks = $this->Blocks->find();
-		
-		$this->loadModel('Entries');
-		$entries = [];
-		foreach($blocks as $block)
-		{
-			$entriesInBlock = $this->Entries->find()->where(['block_id = ' => $block->id]);
-			$entries[$block->id] = $entriesInBlock;
-		}
-		$this->set(compact('blocks', 'entries'));
+		$pokemons = $this->Blocks->find()->where(['title' => 'pokemons'])->contain(['Entries'])->first();
+		$wallpapers = $this->Blocks->find()->where(['title' => 'wallpapers'])->contain(['Entries'])->first();
+		$news = $this->Blocks->find()->where(['title' => 'news'])->contain(['Entries'])->first();
+		$this->set(compact('news', 'wallpapers', 'pokemons'));
 		$this->viewBuilder()->setLayout('bs');
 	}
-    public function display(...$path)
-    {
-        $count = count($path);
-        if (!$count) {
-            return $this->redirect('/');
-        }
-        if (in_array('..', $path, true) || in_array('.', $path, true)) {
-            throw new ForbiddenException();
-        }
-        $page = $subpage = null;
+	public function display(...$path)
+	{
+			$count = count($path);
+			if (!$count) {
+					return $this->redirect('/');
+			}
+			if (in_array('..', $path, true) || in_array('.', $path, true)) {
+					throw new ForbiddenException();
+			}
+			$page = $subpage = null;
 
-        if (!empty($path[0])) {
-            $page = $path[0];
-        }
-        if (!empty($path[1])) {
-            $subpage = $path[1];
-        }
-        $this->set(compact('page', 'subpage'));
+			if (!empty($path[0])) {
+					$page = $path[0];
+			}
+			if (!empty($path[1])) {
+					$subpage = $path[1];
+			}
+			$this->set(compact('page', 'subpage'));
 
-        try {
-            $this->render(implode('/', $path));
-        } catch (MissingTemplateException $e) {
-            if (Configure::read('debug')) {
-                throw $e;
-            }
-            throw new NotFoundException();
-        }
-    }
+			try {
+					$this->render(implode('/', $path));
+			} catch (MissingTemplateException $e) {
+					if (Configure::read('debug')) {
+							throw $e;
+					}
+					throw new NotFoundException();
+			}
+	}
 }
