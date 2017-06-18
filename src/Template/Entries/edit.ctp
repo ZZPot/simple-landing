@@ -24,6 +24,7 @@
         <?php
             echo $this->Form->control('block_id', ['options' => $blocks]);
             echo $this->Form->control('title');
+						echo $this->Form->control('position');
             echo $this->Form->control('body');
             echo $this->Form->control('url');
             echo $this->Form->control('image');

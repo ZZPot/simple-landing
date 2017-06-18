@@ -2,6 +2,7 @@
 /**
   * @var \App\View\AppView $this
   */
+	$this->assign('title', $block_title);
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -12,14 +13,14 @@
     </ul>
 </nav>
 <div class="entries index large-9 medium-8 columns content">
-    <h3><?= __('Entries') ?></h3>
+    <h3><?= h($block_title) ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('block_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('position') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -30,7 +31,7 @@
                 <td><?= $this->Number->format($entry->id) ?></td>
                 <td><?= $entry->has('block') ? $this->Html->link($entry->block->title, ['controller' => 'Blocks', 'action' => 'view', $entry->block->id]) : '' ?></td>
                 <td><?= h($entry->title) ?></td>
-                <td><?= h($entry->created) ?></td>
+                <td><?= h($entry->position) ?></td>
                 <td><?= h($entry->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $entry->id]) ?>
