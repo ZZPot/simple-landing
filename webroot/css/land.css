@@ -48,3 +48,8 @@ footer
 	width: 100%;
 	background-color: rgb(200, 200, 200);
 }
+.col-centered
+{
+    float: none;
+    margin: 0 auto;
+}

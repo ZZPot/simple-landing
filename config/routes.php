@@ -55,11 +55,10 @@ Router::scope('/', function (RouteBuilder $routes) {
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+		
 		$block_list = ['wallpapers', 'news', 'pokemons'];
 		$routes->connect('/:block/', 	['controller' => 'Entries'],
 									['pass' => ['block'], 'block' => '(?i)'.join("|", $block_list).'']);
-		$routes->connect('/:block/:action/*', 	['controller' => 'Entries'],
-									['block' => '(?i)'.join("|", $block_list).'']);
     /**
      * Connect catchall routes for all controllers.
      *

@@ -13,7 +13,8 @@ class EntriesController extends AppController
 
 		public function initialize()
 		{
-				$this->LoadModel('Blocks');
+			parent::initialize();
+			$this->LoadModel('Blocks');
 		}
     /**
      * Index method
@@ -72,9 +73,7 @@ class EntriesController extends AppController
             $entry = $this->Entries->patchEntity($entry, $this->request->getData());
             if ($this->Entries->save($entry)) {
                 $this->Flash->success(__('The entry has been saved.'));
-								$this->LoadModel('Blocks');
-								$block_slug = $this->Blocks->find()->where(['id' => $entry->block_id])->first()->slug;
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'index', $this->getBlockSlug($entry)]);
             }
             $this->Flash->error(__('The entry could not be saved. Please, try again.'));
         }
@@ -99,7 +98,7 @@ class EntriesController extends AppController
             $entry = $this->Entries->patchEntity($entry, $this->request->getData());
             if ($this->Entries->save($entry)) {
                 $this->Flash->success(__('The entry has been saved.'));
-                return $this->redirect('/'.$this->getBlockSlug($entry));
+                return $this->redirect(['action' => 'index', $this->getBlockSlug($entry)]);
             }
             $this->Flash->error(__('The entry could not be saved. Please, try again.'));
         }
@@ -125,9 +124,7 @@ class EntriesController extends AppController
         } else {
             $this->Flash->error(__('The entry could not be deleted. Please, try again.'));
         }
-				$this->LoadModel('Blocks');
-				$block_slug = $this->Blocks->find()->where(['id' => $entry->block_id])->first()->slug;
-        return $this->redirect('/'.$block_slug);
+        return $this->redirect(['action' => 'index', $this->getBlockSlug($entry)]);
     }
 		protected function getBlockSlug($entry)
 		{

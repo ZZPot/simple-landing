@@ -33,8 +33,6 @@ $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstra
 	<div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>
-    <footer>
-		
-    </footer>
+	<?= $this->element('footer')?>
 </body>
 </html>
