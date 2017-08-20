@@ -3,27 +3,33 @@
 	background-color: rgb(200, 200, 200);
 	position: relative;
 }
-.membrana
-{
-	background-color: rgba(255, 255, 255, 0.7);
-	position: absolute;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	top: 0px;
-	display: none;
-}
 .row-header
 {
 	border-bottom: 2px solid #555;
 	margin-bottom: 10px;
 }
+.row-block
+{
+	
+}
 .block
 {
 	
 }
+.block-title
+{
+	text-align: center;
+	color: rgb(0, 200, 0);
+}
+.entry-list
+{
+	text-align: center;
+}
 .entry-title
 {
+	text-align: center;
+	color: rgb(0, 50, 0);
+	font-weight: bold;
 }
 .entry-body
 {
@@ -35,6 +41,34 @@
 {
 	font-size: 10px;
 	color: rgb(200, 200, 200);
+}
+div.entry-image
+{
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+}
+.list-entry
+{
+	display: inline-block;
+	width: 200px;
+	height: 250px;
+	padding: 10px;
+	background-color: rgba(200, 255, 200, 0.8);
+	overflow: hidden;
+	text-align: center;
+	
+}
+.list-entry-body
+{
+	padding: 10%;
+	color: rgb(0, 200, 0);
+	height: 100px;
+	text-shadow: 1px 1px 1px rgb(0, 0, 0);
+	overflow: hidden;
 }
 body > .container
 {
@@ -52,4 +86,44 @@ footer
 {
     float: none;
     margin: 0 auto;
+}
+.platform
+{
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.present-block-img
+{
+	background-size: contain;
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+}
+.present-entry
+{
+	display: inline-block;
+	padding: 10px;
+	background-color: rgba(191, 139, 86, 0.8);
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+	height: 200px;
+}
+.present-block-img-col
+{
+	text-align: center;
+	height: 100%;
+	display: table-cell;
+}
+.present-entry-image
+{
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 70%;
+	height: 80px;
+	display: inline-block;
+}
+.present-entry-title
+{
+	padding: 5px;
 }
